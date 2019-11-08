@@ -1,0 +1,23 @@
+.flex_container{
+  display: flex;
+  align-content: stretch;
+  flex-wrap: wrap;
+}
+
+/* menu */
+.div_section >menu{
+  display: flex;
+  align-content: stretch;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.div_list{          /* barra menu */
+  display: flex;
+}
+.div_list >ul{
+  display: flex;
+}
+.div_search >input{  /*input search  */
+  display: inline-flex;
+}
