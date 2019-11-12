@@ -5,19 +5,16 @@
 }
 
 /* menu */
-.div_section >menu{
+.flex_container nav{
   display: flex;
   align-content: stretch;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
-.div_list{          /* barra menu */
+nav ul{
   display: flex;
 }
-.div_list >ul{
-  display: flex;
-}
-.div_search >input{  /*input search  */
+nav input{  /*input search  */
   display: inline-flex;
 }
