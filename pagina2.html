@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <title>Pagina1</title>
+    <title>Pagina2</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/flex_structure.css">
+    <link rel="stylesheet" href="icoons.css">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800&display=swap" rel="stylesheet">
@@ -13,14 +14,14 @@
   <body class="flex_container " >
     <section>
 
-        <header>
+      <header>
             <nav>
                 <div class="div_btn">
                   <span onclick="openNav()">&#9776;</span>
                 </div>
-                <div  class="sbar_div" id="side_div">
+                <div class="sbar_div" id="side_div">
                     <ul id="margin">
-                      <a href="#" class="x" id="close_btn" onclick="close_Nav()">x</a>
+                      <li class="x"><a href="#"  id="close_btn" onclick="close_Nav()">x</a></li>
                       <li><a href="#">HOME</a></li>
                       <li><a href="#">PROFILE</a></li>
                       <li><a href="#">GALLERY</a></li>
@@ -28,21 +29,32 @@
                     </ul>
                 </div>
                 <div id="src_div">
-                    <form  action="#" method="post" >
+                    <form action="#" method="post" >
                       <input type="text" placeholder="SEARCH" id="src_input" >
                     </form>
                 </div>
             </nav>
-        </header>
+      </header>
 
           <article>
-              <h1>BEYOND EXPECTATIONS.</h1>
-              <h2>LANDING PAGE TEMPLATE</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <a href="#">Lorem ipsum dolor</a> sit amet, consectetur adipiscing</p>
+            <h1>Registrazione</h1>
+              <h2>INSERISCA I PROPRI DATI</h2>
+
+             <form class="form_dati" action="index.html" method="post">
+               <fieldset>
+                 <legend>informazioni personali</legend>
+
+                  <input type="text"  placeholder="NOME">
+
+                  <input type="email"  placeholder="E-MAIL">
+
+                  <input type="date"  class="icon-calendar-alt-stroke">
+               </fieldset>
+             </form>
           </article>
 
           <aside>
-              <button type="button" id="btn_width"><a href="pagina2.html">READ MORE</a></button>
+              <button type="button">SUBMIT</button>
           </aside>
 
     </section>
