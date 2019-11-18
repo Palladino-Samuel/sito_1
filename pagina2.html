@@ -21,7 +21,7 @@
                 </div>
                 <div class="sbar_div" id="side_div">
                     <ul id="margin">
-                      <li class="x"><a href="#"  id="close_btn" onclick="close_Nav()">x</a></li>
+                      <li class="x"><a href="#" id="close_btn" onclick="close_Nav()">x</a></li>
                       <li><a href="#">HOME</a></li>
                       <li><a href="#">PROFILE</a></li>
                       <li><a href="#">GALLERY</a></li>
@@ -30,7 +30,7 @@
                 </div>
                 <div id="src_div">
                     <form action="#" method="post" >
-                      <input type="text" placeholder="SEARCH" id="src_input" >
+                      <input aria-label="inserire cosa cercare" type="text" placeholder="SEARCH" id="src_input" >
                     </form>
                 </div>
             </nav>
@@ -44,17 +44,18 @@
                <fieldset>
                  <legend>informazioni personali</legend>
 
-                  <input type="text"  placeholder="NOME">
+                  <input aria-label="inserire il proprio nome" type="text"  placeholder="NOME" id="id_nome">
 
-                  <input type="email"  placeholder="E-MAIL">
+                  <input aria-label="inserire un email valida" type="email"  placeholder="E-MAIL" id="id_email">
 
-                  <input type="date"  class="icon-calendar-alt-stroke">
+                  <input  aria-label="inserire la data di nascita" type="date"  class="icon-calendar-alt-stroke" id="id_data">
+
                </fieldset>
              </form>
           </article>
 
           <aside>
-              <button type="button">SUBMIT</button>
+              <button aria-label="premere per confermare" type="button">SUBMIT</button>
           </aside>
 
     </section>
