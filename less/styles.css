@@ -3,11 +3,57 @@
   box-sizing: border-box;
 }
 body {
-  background-image: url('img/color.png');
+  background: url('img/color.png');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto 100%;
+  background-position: static;
+  background-color: none;
 }
-/* article */
+.div-btn {
+  width: 15%;
+  z-index: 1;
+  font-size: 30px;
+  cursor: pointer;
+  color: black;
+  display: flex;
+  float: left;
+  padding-left: 10%;
+}
+.sbar-div {
+  z-index: 1;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.98);
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.mixin-input {
+  background-color: rgba(55, 55, 55, 0.7);
+  color: black;
+}
+.mixin-input:focus {
+  background-color: rgba(55, 55, 55, 0.8);
+}
+.mixin-input::placeholder {
+  color: black;
+}
+.mixin-search #margin {
+  margin-left: 0;
+}
+.mixin-search #src_div {
+  width: 70%;
+  float: right;
+}
+.mixin-search #src_input {
+  width: 100%;
+  background-color: rgba(55, 55, 55, 0.4);
+  float: right;
+  margin: 45px 20px 0 0;
+}
 .flex_container article {
   min-height: 34%;
   width: 26.5%;
@@ -15,21 +61,19 @@ body {
   margin-top: 10%;
   color: #656565;
 }
-.flex_container article h1,
-.flex_container article h2 {
-  font-family: 'Poppins', sans-serif;
-}
 .flex_container article h1 {
+  font-family: 'Poppins', sans-serif;
   font-weight: 800;
   font-size: 35.6px;
   line-height: 120%;
   padding-top: 17.2px;
 }
 .flex_container article h2 {
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
+  font-size: 21px;
   margin-top: -29px;
   letter-spacing: 1.4px;
-  font-size: 21px;
 }
 .flex_container article p {
   font-family: 'Open Sans', serif;
@@ -42,7 +86,6 @@ body {
   color: red;
   border: none;
   max-height: 200px;
-  /* background-image: linear-gradient(to right, rgb(252, 162, 74), rgba(255, 255, 255, 1)); */
 }
 .flex_container article .form_dati input {
   padding: 10px;
@@ -60,38 +103,36 @@ body {
 .flex_container article .form_dati input::placeholder {
   color: black;
 }
-/* section */
 .flex_container section {
   min-height: 627px;
   width: 85%;
   margin: 8.5% 6.8% 8.49% 8.3%;
-  /* margin:106px 85px 105px 8.3%; */
   background: url('img/sfondo.png');
   background-repeat: no-repeat;
   background-size: auto 627.9px;
   background-position: right;
   background-color: white;
 }
-/*padding-left: 0px; min media queries
-margin-left: -25px;*/
 nav {
   width: 100%;
   height: 15%;
   margin-top: 44px;
-  font-family: 'Open Sans', serif;
-  font-weight: 300;
 }
 nav ul {
+  font-family: 'Open Sans', serif;
+  font-weight: 300;
+  font-size: auto;
   list-style-type: none;
-  color: #656565;
   margin-left: 39px;
 }
 nav li {
+  font-family: 'Open Sans', serif;
+  font-weight: 300;
+  font-size: 14.5px;
   padding: 0 0 4px 0;
   margin: 1px 30px -4px 6px;
   display: block;
   border-bottom: 1px solid rgba(0, 0, 0, 0);
-  font-size: 14.5px;
   letter-spacing: 1.2px;
 }
 nav li:hover {
@@ -107,10 +148,10 @@ nav input {
   border: none;
   outline: none;
   background-color: rgba(255, 255, 255, 0.3);
-  color: #fff;
-  font-size: 14.5px;
   font-family: 'Open Sans', serif;
   font-weight: 400;
+  font-size: 14.5px;
+  color: white;
   letter-spacing: 1.2px;
 }
 nav input::placeholder {
@@ -154,7 +195,7 @@ li > a {
   display: none;
 }
 [type="date"]::-webkit-inner-spin-button {
-  /*elimina le freccine*/
+  /*elimina freccie input-data*/
   display: none;
 }
 [type="date"]::-webkit-calendar-picker-indicator {
@@ -172,7 +213,6 @@ li > a {
     margin-left: 0;
   }
   #src_div {
-    /*search*/
     width: 70%;
     float: right;
   }
@@ -180,7 +220,7 @@ li > a {
     width: 100%;
     background-color: rgba(55, 55, 55, 0.4);
     float: right;
-    margin: 45px 20px 0 0px;
+    margin: 45px 20px 0 0;
   }
   .flex_container article {
     /*article */
@@ -190,22 +230,22 @@ li > a {
     margin-top: 10%;
     color: black;
   }
-  .form_dati input {
+  .flex_container article .form_dati input {
     /*input article */
     background-color: rgba(55, 55, 55, 0.7);
     color: black;
   }
-  .form_dati input:focus {
+  .flex_container article .form_dati input:focus {
     background-color: rgba(55, 55, 55, 0.8);
   }
-  .form_dati input::placeholder {
+  .flex_container article .form_dati input::placeholder {
     color: black;
   }
-  aside button {
+  .flex_container aside button {
     margin: 9px auto 0 22%;
     padding: 3.5px 20% 3.5px 20%;
   }
-  aside #btn_width {
+  .flex_container aside #btn_width {
     margin: 15px 0 0 8.6%;
     padding: 3.5px 9px 3.5px 10px;
   }
@@ -215,11 +255,11 @@ li > a {
     background-repeat: no-repeat;
     background-size: auto 627.9px;
     background-position: right;
+    background-color: none;
     width: 100%;
     margin: 0px 0px 0px 0px;
   }
   .div_btn {
-    /*div con il bottone */
     width: 15%;
     z-index: 1;
     font-size: 30px;
@@ -230,7 +270,6 @@ li > a {
     padding-left: 10%;
   }
   .sbar_div {
-    /*sposta il menu a lista nel menu laterale*/
     z-index: 1;
     height: 100%;
     width: 0;
@@ -294,7 +333,6 @@ li > a {
     margin-left: 0;
   }
   #src_div {
-    /*search*/
     width: 70%;
     float: right;
   }
@@ -302,7 +340,7 @@ li > a {
     width: 100%;
     background-color: rgba(55, 55, 55, 0.4);
     float: right;
-    margin: 45px 20px 0 0px;
+    margin: 45px 20px 0 0;
   }
   .flex_container article {
     /*article */
@@ -312,15 +350,15 @@ li > a {
     margin-top: 10%;
     color: black;
   }
-  .form_dati input {
+  .flex_container article .form_dati input {
     /*input article */
     background-color: rgba(55, 55, 55, 0.7);
     color: black;
   }
-  .form_dati input:focus {
+  .flex_container article .form_dati input:focus {
     background-color: rgba(55, 55, 55, 0.8);
   }
-  .form_dati input::placeholder {
+  .flex_container article .form_dati input::placeholder {
     color: black;
   }
   aside button {
@@ -337,9 +375,9 @@ li > a {
     background-repeat: no-repeat;
     background-size: auto 627.9px;
     background-position: right;
+    background-color: none;
   }
   .div_btn {
-    /*div con il bottone */
     width: 15%;
     z-index: 1;
     font-size: 30px;
@@ -347,10 +385,9 @@ li > a {
     color: black;
     display: flex;
     float: left;
-    margin-left: 10%;
+    padding-left: 10%;
   }
   .sbar_div {
-    /*sposta il menu a lista nel menu laterale*/
     z-index: 1;
     height: 100%;
     width: 0;
@@ -405,12 +442,19 @@ li > a {
 @media only screen and (max-width: 992px) and (min-width: 767px) {
   .flex_container section {
     /* resize background*/
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)), url('img/sfondo.png');
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)), url('img/sfondo.png');
     background-repeat: no-repeat;
     background-size: auto 627.9px;
     background-position: right;
+    background-color: white;
   }
   .flex_container article {
+    color: black;
+  }
+  .form_dati input {
+    color: black;
+  }
+  .form_dati input::placeholder {
     color: black;
   }
   #src_div {
@@ -423,11 +467,5 @@ li > a {
   #src_input {
     width: 100%;
     background-color: rgba(55, 55, 55, 0.3);
-  }
-  .form_dati input {
-    color: black;
-  }
-  .form_dati input::placeholder {
-    color: black;
   }
 }

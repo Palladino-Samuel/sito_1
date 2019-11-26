@@ -2,106 +2,92 @@
   box-sizing: border-box;
 }
 body{
-  background-image:  url('img/color.png');
-  background-repeat: no-repeat;
-  background-size:cover;
+  .background-mixin(@url_img-1; no-repeat; 100%; static; none);
 }
-//variabili colori
-@primary-color: #656565;
-@secondary-color: black;
+@import "variabili.less";
+@import "classi.less";
+@import url("icoons.css");
 
-/* article */
+
+//  article
 .flex_container article{
     min-height: 34%;
     width: 26.5%;
     margin-left: 8.7%;
     margin-top: 10%;
-    color: @primary-color;
-
-    h1, h2{
-      font-family: 'Poppins', sans-serif;
-    }
+    color: @text-color;//colore testo article
     h1{
-      font-weight: 800;
-      font-size: 35.6px;
+      .Poppins-mixin(800; 35.6px);//font:  -family -weight -size
       line-height: 120%;
       padding-top:17.2px;
     }
     h2{
-      font-weight: 400;
+      .Poppins-mixin(400; 21px);
       margin-top:-29px;
       letter-spacing:1.4px;
-      font-size: 21px;
     }
     p{
-      font-family: 'Open Sans', serif;
-      font-weight: 300;
-      font-size: 11px;
+      .Open-mixin(300; 11px);
       margin-top:-7.5px;
       line-height:1.272;
     }
     .form_dati{
-        fieldset{
-          color: red;
-          border: none;
-          max-height: 200px;
-          /* background-image: linear-gradient(to right, rgb(252, 162, 74), rgba(255, 255, 255, 1)); */
-        }
-        input{
-          padding: 10px;
-          margin: 7px 5px 7px 5px;
-          width: 90%;
-          border:none;
-          background-color:rgba(55, 55, 55, 0.3);
-          border-radius: 3px;
-          outline: none;
-          color: @secondary-color;
+      fieldset{
+        color: @text-color-2;
+        border: none;
+        max-height: 200px;
+      }
+      input{
+        padding: 10px;
+        margin: 7px 5px 7px 5px;
+        width: 90%;
+        border:none;
+        background-color:rgba(55, 55, 55, 0.3);
+        border-radius: 3px;
+        outline: none;
+        color: @input-color;//colore input dati utente
 
-          &:focus{
-            background-color: rgba(55, 55, 55, 0.5)
-          }
-          &::placeholder{
-            color: @secondary-color;
-          }
+        &:focus{
+          background-color: rgba(55, 55, 55, 0.5)
         }
-    }
+        &::placeholder{
+          color: @input-color;//colore placeholder dati utente
+        }
+      }
+  }
 }
-/* section */
+//  section
 .flex_container section{
-  min-height: 627px;
-  width: 85%;
-  margin:8.5% 6.8% 8.49% 8.3%;
-  /* margin:106px 85px 105px 8.3%; */
-  background: url('img/sfondo.png');
-  background-repeat: no-repeat;
-  background-size:auto 627.9px;
-  background-position: right;
-  background-color: white;
+    min-height: 627px;
+    width: 85%;
+    // width:  calc(85% - 100px - 5%);
+
+    margin:8.5% 6.8% 8.49% 8.3%;
+    .background-mixin(@url_img-2; no-repeat; 627.9px; right; white);
 }
-/*padding-left: 0px; min media queries
-margin-left: -25px;*/
+//  nav
 nav{
-  width: 100%;
-  height: 15%;
-  margin-top:44px;
-  font-family: 'Open Sans', serif;
-  font-weight: 300;
+    width: 100%;
+    height: 15%;
+    margin-top:44px;
+    @weight: 300;
+
     ul{
+      .Open-mixin(@weight; auto);
       list-style-type: none;
-      color:@primary-color;
       margin-left: 39px;
     }
     li{
+      .Open-mixin(@weight; 14.5px);
       padding:0 0 4px 0;
       margin:1px 30px -4px 6px;
       display: block;
       border-bottom: 1px solid rgba(0,0,0,0);
-      font-size:14.5px;
       letter-spacing:1.2px;
 
       &:hover{
         margin-right: 28.59px;
-        border-bottom: 1px solid @primary-color;
+        border-bottom: 1px solid @menu-color;//colore sottolineamento hover elementi menu orizzontale
         font-weight: 500;
         cursor: pointer;
       }
@@ -113,20 +99,18 @@ nav{
       border:none;
       outline: none;
       background-color:rgba(255, 255, 255, 0.3);
-      color:#fff;
-      font-size:14.5px;
-      font-family: 'Open Sans', serif;
-      font-weight: 400;
+      .Open-mixin(400; 14.5px);
+      color: @search-color;//colore testo search
       letter-spacing:1.2px;
 
       &::placeholder{
-        color: white;
+        color: @search-color;//colore placeholder input search
       }
     }
 }
-
+//  aside
 aside{
-  height: auto;
+    height: auto;
     button{
       margin:-2px 0 0 8.6%;;
       padding: 3.5px 9px 3.5px 10px;
@@ -135,9 +119,7 @@ aside{
       border:none;
       border-radius:10px;
       outline: none;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 200;
-      font-size:17px;
+      .Poppins-mixin(200; 17px);
       letter-spacing:1.6px;
 
       &:hover{
@@ -149,11 +131,11 @@ aside{
 
 button >a{
   text-decoration: none;
-  color:#fff;
+  color:#fff;//colore read-more
 }
 li > a{
   text-decoration: none;
-  color: @primary-color;
+  color: @menu-color;// colore scritte menu orizzontale
 }
 //visualizzazione del menu sidemenu
 .div_btn{
@@ -166,10 +148,7 @@ li > a{
   display: none;
 }
 
-
-@import url("icoons.css");
-
-[type="date"]::-webkit-inner-spin-button {/*elimina le freccine*/
+[type="date"]::-webkit-inner-spin-button {/*elimina freccie input-data*/
   display: none;
 }
 [type="date"]::-webkit-calendar-picker-indicator {
@@ -181,90 +160,49 @@ li > a{
 
 @media only screen and (max-width:576px) {
   nav ul{
-    list-style-type: none;
-    color:@primary-color;
-    margin-left: 39px;
+      list-style-type: none;
+      color:@menu-color;
+      margin-left: 39px;
   }
-  #margin{
-    margin-left:0;
-  }
-  #src_div{   /*search*/
-    width: 70%;
-    float: right;
-  }
-  #src_input{
-    width: 100%;
-    background-color:rgba(55, 55, 55, 0.4);
-    float: right;
-    margin:45px 20px 0 0px;
-  }
+  .mixin-search();
 
- .flex_container article{      /*article */
-    min-height: 20%;
-    width: auto;
-    margin-right: 2%;
-    margin-top: 10%;
-    color: @secondary-color;
-  }
-
-  .form_dati input{   /*input article */
-    background-color:rgba(55, 55, 55, 0.7);
-    color: @secondary-color;
-
-    &:focus{
-      background-color: rgba(55, 55, 55, 0.8)
-    }
-    &::placeholder{
-      color: @secondary-color;
-    }
-  }
-
-  aside{
-      button{
-        margin:9px auto 0 22%;
-        padding: 3.5px 20% 3.5px 20%;
+  .flex_container{
+      article{      /*article */
+        min-height: 20%;
+        width: auto;
+        margin-right: 2%;
+        margin-top: 10%;
+        color: @text-color-1;
+        .form_dati input{   /*input article */
+          .mixin-input();
+        }
       }
-      #btn_width{
-        margin:15px 0 0 8.6%;;
-        padding: 3.5px 9px 3.5px 10px;
+      aside{
+        button{
+          margin:9px auto 0 22%;
+          padding: 3.5px 20% 3.5px 20%;
+        }
+        #btn_width{
+          margin:15px 0 0 8.6%;;
+          padding: 3.5px 9px 3.5px 10px;
+        }
       }
   }
-
   .flex_container section{    /* resize background*/
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1)) ,url('img/sfondo.png');
-    background-repeat: no-repeat;
-    background-size:auto 627.9px;
-    background-position: right;
-    width: 100%;
-    margin:0px 0px 0px 0px;
+      .background-mixin(@image-gradient-1; no-repeat; 627.9px; right; none);
+      width: 100%;
+      margin:0px 0px 0px 0px;
   }
-  .div_btn{   /*div con il bottone */
-    width: 15%;
-    z-index: 1;
-    font-size: 30px;
-    cursor: pointer;
-    color: @secondary-color;
-    display: flex;
-    float: left;
-    padding-left: 10%;
-  }
-  .sbar_div{    /*sposta il menu a lista nel menu laterale*/
-    z-index: 1;
-    height: 100%;
-    width: 0;
-    position: fixed;
-    background-color: rgba(0,0,0,0.98);
-    top: 0;
-    left: 0;
-    transition: 0.5s;
-    overflow-x: hidden;
-    overflow-y: hidden;
+  .div_btn{
+    .div-btn();
+          }
+  .sbar_div{
+    .sbar-div();
     margin: 5px;
-  }
-
+          }
   ul{
-    display: flex;
-    flex-direction: column;
+      display: flex;
+      flex-direction: column;
       li{   /*elementi menu sidebar*/
         z-index: 1;
         padding: 10px 10px 10px 15px;
@@ -306,39 +244,20 @@ li > a{
 @media only screen and (max-width:768px) and (min-width:576px){
   nav ul{
     list-style-type: none;
-    color:@primary-color;
+    color:@menu-color;
     margin-left: 39px;
   }
-  #margin{
-    margin-left:0;
-  }
-  #src_div{   /*search*/
-    width: 70%;
-    float: right;
-  }
-  #src_input{
-    width: 100%;
-    background-color:rgba(55, 55, 55, 0.4);
-    float: right;
-    margin:45px 20px 0 0px;
-  }
+  .mixin-search();
+
  .flex_container article{      /*article */
-    min-height: 20%;
-    width: auto;
-    margin-right: 2%;
-    margin-top: 10%;
-    color: @secondary-color;
-  }
+      min-height: 20%;
+      width: auto;
+      margin-right: 2%;
+      margin-top: 10%;
+      color: @text-color-1;
 
-  .form_dati input{   /*input article */
-    background-color:rgba(55, 55, 55, 0.7);
-    color: @secondary-color;
-
-    &:focus{
-      background-color: rgba(55, 55, 55, 0.8)
-    }
-    &::placeholder{
-      color: @secondary-color;
+      .form_dati input{   /*input article */
+      .mixin-input();
     }
   }
 
@@ -354,37 +273,18 @@ li > a{
   }
 
   .flex_container section{    /* resize background*/
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1)) ,url('img/sfondo.png');
-    background-repeat: no-repeat;
-    background-size:auto 627.9px;
-    background-position: right;
+      .background-mixin(@image-gradient-1; no-repeat; 627.9px; right; none);
   }
-  .div_btn{   /*div con il bottone */
-    width: 15%;
-    z-index: 1;
-    font-size: 30px;
-    cursor: pointer;
-    color: @secondary-color;
-    display: flex;
-    float: left;
-    margin-left: 10%;
-  }
-  .sbar_div{    /*sposta il menu a lista nel menu laterale*/
-    z-index: 1;
-    height: 100%;
-    width: 0;
-    position: fixed;
-    background-color: rgba(0,0,0,0.98);
-    top: 0;
-    left: 0;
-    transition: 0.5s;
-    overflow-x: hidden;
-    overflow-y: hidden;
-  }
+  .div_btn{
+      .div-btn();
+          }
+  .sbar_div{
+      .sbar-div();
+          }
 
   ul{
-    display: flex;
-    flex-direction: column;
+      display: flex;
+      flex-direction: column;
       li{   /*elementi menu sidebar*/
         z-index: 1;
         padding: 10px 10px 10px 15px;
@@ -417,22 +317,26 @@ li > a{
   }
 
   .x> a:hover, .x:hover{
-    color: red;
-    border: none;
+      color: red;
+      border: none;
   }
+
 }
 
 @media only screen and (max-width:992px) and (min-width:767px){
   .flex_container{
       section{    /* resize background*/
-        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.0)) ,url('img/sfondo.png');
-        background-repeat: no-repeat;
-        background-size:auto 627.9px;
-        background-position: right;
+        .background-mixin(@image-gradient-2; no-repeat; 627.9px; right; white);
       }
       article{
-        color: @secondary-color;
+        color: @text-color-1;
       }
+  }
+  .form_dati input{
+    color: @input-color;
+    &::placeholder{
+      color: @input-color;
+    }
   }
   #src_div{   /*search*/
     width: 100%;
@@ -443,12 +347,5 @@ li > a{
   #src_input{
     width: 100%;
     background-color:rgba(55, 55, 55, 0.3);
-  }
-
-  .form_dati input{
-    color: @secondary-color;
-    &::placeholder{
-      color: @secondary-color;
-    }
   }
 }
