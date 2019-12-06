@@ -54,6 +54,89 @@ body {
   float: right;
   margin: 45px 20px 0 0;
 }
+.stampaArray #r1 {
+  margin: 2px 0 0 6px;
+  padding: 2px 9px 2px 10px;
+  background-color: rgba(55, 55, 55, 0.7);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  font-size: 17px;
+  letter-spacing: 1.6px;
+}
+.stampaArray #r1:hover {
+  background-color: #373737;
+  cursor: pointer;
+}
+.stampaArray #textArea {
+  margin-top: 2%;
+  margin-left: 5px;
+  display: none;
+  resize: none;
+  background-image: linear-gradient(to left, #fdfdfd, #fdfdfd, rgba(216, 0, 0, 0.5));
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-left: rgba(216, 0, 0, 0.6);
+}
+.stampaArray #textArea:focus {
+  outline: none;
+}
+.stampaArray #textArea:before {
+  background-image: red;
+}
+.inpU {
+  display: flex;
+  float: left;
+  padding: 10px;
+  margin: 1px 5px 0 5px;
+  width: 60%;
+  border: none;
+  background-color: rgba(55, 55, 55, 0.3);
+  border-radius: 3px;
+  outline: none;
+  color: black;
+}
+.inpU:focus {
+  background-color: rgba(55, 55, 55, 0.5);
+}
+.inpU::placeholder {
+  color: black;
+}
+.btnU {
+  float: left;
+  margin-left: 4px;
+  background-color: rgba(55, 55, 55, 0.7);
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+.btnU:hover {
+  background-color: #373737;
+  cursor: pointer;
+}
+#textArea1 {
+  margin-left: 5px;
+  margin-top: 2%;
+  resize: none;
+  background-image: linear-gradient(to left, #fdfdfd, #fdfdfd, rgba(216, 0, 0, 0.5));
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-left: rgba(216, 0, 0, 0.6);
+}
+#textArea1:focus {
+  outline: none;
+}
+#articleU {
+  width: 40%;
+  color: black;
+  weight: 500;
+}
+#h2U {
+  weight: 700;
+  margin-top: 20px;
+}
 .flex_container article {
   min-height: 34%;
   width: 26.5%;

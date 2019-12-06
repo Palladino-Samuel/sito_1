@@ -8,6 +8,96 @@ body{
 @import "classi.less";
 @import url("icoons.css");
 
+.stampaArray{
+  #r1{
+    margin: 2px 0 0 6px;
+    padding: 2px 9px 2px 10px;
+    //background-image: linear-gradient(to right,#a21e8b,#fe3b4b,#ff7111);
+    background-color: rgba(55, 55, 55, 0.7);
+    color: white;
+    border:none;
+    border-radius:3px;
+    outline: none;
+    .Poppins-mixin(200; 17px);
+    letter-spacing:1.6px;
+
+    &:hover{
+    //background-image: linear-gradient(to left,#a21e8b,#fe3b4b,#ff7111);
+    background-color: rgba(55, 55, 55, 1);
+      cursor: pointer;
+    }
+  }
+
+  #textArea{
+    margin-top: 2%;
+    margin-left: 5px;
+    display: none;
+    resize: none;
+    background-image: linear-gradient(to left, #fdfdfd, #fdfdfd, rgba(216, 0, 0, 0.5));
+    border: 1px solid rgba(0,0,0,0);
+    border-left: rgba(216, 0, 0, 0.6);
+
+    &:focus{
+      outline: none;
+    }
+    &:before {
+      background-image: red;
+    }
+  }
+}
+
+.inpU{
+  display: flex;
+  float: left;
+  padding: 10px;
+  margin: 1px 5px 0 5px;
+  width: 60%;
+  border:none;
+  background-color:rgba(55, 55, 55, 0.3);
+  border-radius: 3px;
+  outline: none;
+  color: @input-color;//colore input dati utente
+  &:focus{
+    background-color: rgba(55, 55, 55, 0.5)
+  }
+  &::placeholder{
+    color: @input-color;//colore placeholder dati utente
+  }
+}
+.btnU{
+  float: left;
+  margin-left: 4px;
+  background-color: rgba(55, 55, 55, 0.7);
+  padding: 10px;
+  border: none;
+  border-radius:3px;
+  outline: none;
+  &:hover{
+    background-color: rgba(55, 55, 55, 1);
+    cursor: pointer;
+  }
+}
+#textArea1{
+  margin-left: 5px;
+  margin-top: 2%;
+  resize: none;
+  background-image: linear-gradient(to left, #fdfdfd, #fdfdfd, rgba(216, 0, 0, 0.5));
+  border: 1px solid rgba(0,0,0,0);
+  border-left: rgba(216, 0, 0, 0.6);
+  &:focus{
+    outline: none;
+  }
+}
+#articleU{
+  width: 40%;
+  color: black;
+  weight: 500;
+}
+#h2U{
+  weight: 700;
+  margin-top: 20px;
+}
+
 
 //  article
 .flex_container article{

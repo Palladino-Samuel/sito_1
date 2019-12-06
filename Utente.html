@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="less/styles.css">
     <link rel="stylesheet" href="css/flex_structure.css">
     <link rel="stylesheet" href="icoons.css">
+    <link rel="stylesheet" href="icoons_1.css">
 
     <!-- <link rel="stylesheet/less" type="text/css" href="styles.less"/>
     <script src="less.js" type="text/javascript"></script> -->
@@ -31,37 +32,34 @@
                       <li><a href="#">CONTACT</a></li>
                     </ul>
                 </div>
-                <div id="src_div">
-                    <form action="#" method="post" >
-                      <input aria-label="inserire cosa cercare" type="text" placeholder="SEARCH" id="src_input" >
-                    </form>
-                </div>
+
             </nav>
       </header>
 
-          <article>
-            <h1>Add Account</h1>
-              <h2>INSERISCA I PROPRI DATI</h2>
+          <article id="articleU">
 
-             <form class="form_dati" name="datiUtente" method="post" oninput="myFunction()" >
-               <fieldset>
-                 <legend>informazioni personali</legend>
 
-                  <input id="id_nome" aria-label="inserire il proprio nome" type="text"  placeholder="NOME" >
 
-                  <input id="id_email" aria-label="inserire un email valida" type="email"  placeholder="E-MAIL" >
+            <h2 >Ricerca Utente:</h2>
+              <input class="inpU" type="text" placeholder="SEARCH" id="nameSearch">
+              <input class="inpU" style="display:none" placeholder="altro valore " type="text" id="NameSearch1">
+              <button class="icon-search btnU " id="src" ></button>
+              <button class="btnU icon-cross" id="delete" ></button>
 
-               </fieldset>
-             </form>
+              <br>
+              <textarea id="textArea1" rows="5" cols="60"></textarea>
+              <br><br>
+            <h2 id="h2U">Visualizza Utenti:</h2>
+              <div class="stampaArray">
+                <button id="r1" >View</button>
+
+                <textarea id="textArea" rows="5" cols="60"></textarea>
+              </div>
+
           </article>
-
-        <aside>
-              <button aria-label="premere per confermare" type="submit" onclick="returnObject(event)" id="sbm">SUBMIT</button>
-        </aside>
 
     </section>
 
-
-    <script src="Script.js"></script>
+    <script src="Script1.js"></script>
   </body>
 </html>
