@@ -31,41 +31,56 @@ function returnObject(event){
      localStorage.setItem("testJSON", myJSON);
 
      var index = Utenti.lastIndexOf(persona);
-     //console.log(Utenti[index].nome);
-     //document.getElementById('checkReturn').innerHTML = Utenti[index].viewObject() ;
 }
 
 
 //  funzione registrazione
 function myFunction(){
-    Nome = checkName();
-    Email = checkEmail();
-}
-
-//  check name
-function checkName(){
     var nome = document.forms["datiUtente"]["id_nome"].value;
-    if (isNaN(nome)) {
-      document.getElementById('id_nome').style.backgroundColor="rgba(102, 255, 0, 0.3)";
-      return nome;
-    }else {
-      document.getElementById('id_nome').style.backgroundColor="rgba(255, 0, 0, 0.3)";
-    }
-}
-//  check email
-function checkEmail(){
     var email = document.forms["datiUtente"]["id_email"].value;
-    if(validEmail(email)){
-      document.getElementById('id_email').style.backgroundColor="rgba(102, 255, 0, 0.3)";
-      return email;
-    }else {
-      document.getElementById('id_email').style.backgroundColor="rgba(255, 0, 0, 0.3)";
+    Nome=validateInput.returnNome(nome, "id_nome");
+    Email=validateInput.returnEmail(email, "id_email");
+ }
+//modulo validazione nome e email
+const validateInput= (function(){
+
+    function _color(id, i){
+      let x = document.getElementById(id).style;
+      i==1?x.backgroundColor="rgba(102, 255, 0, 0.3)":x.backgroundColor="rgba(255, 0, 0, 0.3)";
     }
-}
-function validEmail(email){
-    var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-    return re.test(email);
-}
+
+    function returnEmail(valore, id){
+      if(_validEmail(valore)){
+        var i=1;
+        _color(id, i);
+        return valore;
+      }else{
+        i=0;
+        _color(id, i);
+      }
+    }
+    function _validEmail(email){
+      var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+      return re.test(email);
+    }
+
+    function returnNome(valore, id){
+      if(isNaN(valore)){
+        var i=1;
+        _color(id, i);
+        return valore;
+      }else {
+        i=0;
+        _color(id, i);
+      }
+    }
+
+    return {
+      returnEmail:returnEmail,
+      returnNome:returnNome
+    }
+})()
+
 
 //  classe Utente
 class User{
