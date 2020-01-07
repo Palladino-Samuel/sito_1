@@ -1,0 +1,38 @@
+//variabili  base
+@primary-color: #656565;
+@secondary-color: black;
+@url_img-1:url('img/color.png') ;
+@url_img-2:url('img/sfondo.png') ;
+@image-gradient-1: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1)) ,@url_img-2; //sfondo + gradient min/med-media
+@image-gradient-2: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.0)) ,@url_img-2; //sfondo + gradient max-media
+
+
+//variabili colore
+@text-color: @primary-color;    //colore testo article
+@text-color-1: @secondary-color;    //colore testo article
+@text-color-2: red;
+@search-color:white;    //colore search
+@input-color: @secondary-color;   //colore input dati utente
+@menu-color: @primary-color;    //colore menu orizzontale / verticale(della sidebar)
+// @width: calc(85% - 100px - 5%);
+
+//font
+.Poppins-mixin(@weight; @size){
+  font-family: 'Poppins', sans-serif;
+  font-weight: @weight;
+  font-size: @size;
+}
+.Open-mixin(@weight; @size){
+  font-family: 'Open Sans', serif;
+  font-weight: @weight;
+  font-size: @size;
+}
+
+//background
+.background-mixin(@url; @repeat; @size2; @position; @color){
+  background: @url;
+  background-repeat: @repeat;
+  background-size:auto @size2;
+  background-position: @position;
+  background-color: @color;
+}

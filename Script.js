@@ -1,10 +1,10 @@
-
 var myJSON;
 var n=0;
 var Nome;
 var Email;
 var index =-1;
 var persona;
+var d=0;
 
 //theme's change
 $("#Theme").click(function(){
@@ -31,6 +31,9 @@ function toggleText(a, b, text){
   return (text==a?b:a);
 }
 
+
+
+
 //sideBar
 function openNav(){
   document.getElementById("side_div").style.width = "250px";
@@ -38,7 +41,6 @@ function openNav(){
 function close_Nav(){
   document.getElementById("side_div").style.width= "0";
 }
-
 
 
 if(!localStorage.getItem("testJSON")){
