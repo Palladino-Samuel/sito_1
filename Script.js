@@ -6,12 +6,29 @@ var index =-1;
 var persona;
 var d=0;
 
-//theme's change
+  //theme's change
 $("#Theme").click(function(){
-  $("link[href='less/styles.css']").attr("href", "less/styles_1.css");
+  $("link#switch_link").attr("href", (toggleLink(("less/styles.css"),("less/styles_1.css"), $("link#switch_link").attr("href"))));
+
 });
 
-//regex
+
+function toggleLink(a, b, link){
+  console.log(link);
+  return (link==a?b:a);
+}
+
+  //change class color
+$("#btnR").click(function(){
+  $("#divR").toggleClass("classR2");
+  $("#nomeBR").text(toggleText("change class", "reset class", $(this).text()));
+  });
+  // toggleText
+function toggleText(a, b, text){
+  return (text==a?b:a);
+}
+
+  //regex
 function regS(){
   var str="abc 12345678 AAA";
   var patt1=str.match(/[abc]+/gm);
@@ -19,20 +36,6 @@ function regS(){
   var str2 = str.replace(/[abc]*/gmi, "");
   document.getElementById("demo").innerHTML = str2;
 }
-
-
-//change class color
-$("#btnR").click(function(){
-  $("#divR").toggleClass("classR2");
-  $("#nomeBR").text(toggleText("change class", "reset class", $(this).text()));
-  });
-// toggleText
-function toggleText(a, b, text){
-  return (text==a?b:a);
-}
-
-
-
 
 //sideBar
 function openNav(){

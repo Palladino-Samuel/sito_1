@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 body {
-  background: url('img/color.png');
+  background: url('img/color_1.png');
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: static;
@@ -205,7 +205,7 @@ body {
   min-height: 627px;
   width: 85%;
   margin: 8.5% 6.8% 8.49% 8.3%;
-  background: url('img/sfondo.png');
+  background: url('img/sfondo_1.png');
   background-repeat: no-repeat;
   background-size: auto 627.9px;
   background-position: right;
@@ -261,7 +261,7 @@ aside {
 aside button {
   margin: -2px 0 0 8.6%;
   padding: 3.5px 9px 3.5px 10px;
-  background-image: linear-gradient(to right, #a21e8b, #fe3b4b, #ff7111);
+  background-image: linear-gradient(to right, #3db42d, #3f9574, #0746d5);
   color: white;
   border: none;
   border-radius: 10px;
@@ -272,7 +272,7 @@ aside button {
   letter-spacing: 1.6px;
 }
 aside button:hover {
-  background-image: linear-gradient(to left, #a21e8b, #fe3b4b, #ff7111);
+  background-image: linear-gradient(to left, #3db42d, #3f9574, #0746d5);
   cursor: pointer;
 }
 button > a {
@@ -349,7 +349,7 @@ li > a {
   }
   .flex_container section {
     /* resize background*/
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1)), url('img/sfondo.png');
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1)), url('img/sfondo_1.png');
     background-repeat: no-repeat;
     background-size: auto 627.9px;
     background-position: right;
@@ -469,7 +469,7 @@ li > a {
   }
   .flex_container section {
     /* resize background*/
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1)), url('img/sfondo.png');
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1)), url('img/sfondo_1.png');
     background-repeat: no-repeat;
     background-size: auto 627.9px;
     background-position: right;
@@ -540,7 +540,7 @@ li > a {
 @media only screen and (max-width: 992px) and (min-width: 767px) {
   .flex_container section {
     /* resize background*/
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)), url('img/sfondo.png');
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)), url('img/sfondo_1.png');
     background-repeat: no-repeat;
     background-size: auto 627.9px;
     background-position: right;
