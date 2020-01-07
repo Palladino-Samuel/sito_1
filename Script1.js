@@ -4,6 +4,9 @@ var Nome;
 var Email;
 var index =-1;
 var persona;
+
+
+
 //sideBar
 function openNav(){
   document.getElementById("side_div").style.width = "250px";

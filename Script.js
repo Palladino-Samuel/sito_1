@@ -4,14 +4,64 @@ var Nome;
 var Email;
 var index =-1;
 var persona;
+var d=0;
 
+function changeTeme(){
+  let r="style.less";
+  let y= r.replace(/[variabili.less]+/gmi, "variabili1.less");
+  r=y;
+}
+
+//regex
+function regS(){
+  var str="abc 12345678 AAA";
+  var patt1=str.match(/[abc]+/gm);
+  var str1 = str.replace(/[\s]+/gm, '_');
+  var str2 = str.replace(/[abc]*/gmi, "");
+  document.getElementById("demo").innerHTML = str2;
+}
+
+
+
+//change class
+document.getElementById('btnR').onclick= buttonReg;
+function buttonReg(){
+  let btn = document.getElementById('btnR');
+  let divx =document.getElementById('divR');
+  let nmB = document.getElementById('nomeBR');
+
+  switch (d) {
+    case 0:
+      d++;
+      divx.className=regFunction.setClass(divx, /[class1]+/gm, "classR2");
+      nmB.innerHTML="reset class";
+      break;
+    case 1:
+      d--;
+      nmB.innerHTML="change class";
+      divx.className=regFunction.setClass(divx, /[R2]{2}$/gmi, "1");
+      break;
+  }
+}
+
+//CHANGE CLASS FUNCTION
+const regFunction= (function(){
+    function setClass(divx, a, b){
+      let er = divx.className.replace(a, b);
+      return er;
+    }
+  return{
+    setClass:setClass,
+  }
+})()
+
+//sideBar
 function openNav(){
   document.getElementById("side_div").style.width = "250px";
 }
 function close_Nav(){
   document.getElementById("side_div").style.width= "0";
 }
-
 
 
 if(!localStorage.getItem("testJSON")){

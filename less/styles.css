@@ -3,11 +3,25 @@
   box-sizing: border-box;
 }
 body {
-  background: url('img/color.png');
+  background: url('img/color_1.png');
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: static;
   background-color: none;
+}
+.class1 {
+  background-color: red;
+}
+.classR2 {
+  background-color: yellow;
+}
+.btnReg {
+  width: 120px;
+  height: auto;
+}
+.btnReg p {
+  margin: 0;
+  text-align: center;
 }
 .div-btn {
   width: 15%;
@@ -72,13 +86,14 @@ body {
   cursor: pointer;
 }
 .stampaArray #textArea {
+  z-index: -1;
   margin-top: 2%;
   margin-left: 5px;
   display: none;
   resize: none;
-  background-image: linear-gradient(to left, #fdfdfd, #fdfdfd, rgba(216, 0, 0, 0.5));
-  border: 1px solid rgba(0, 0, 0, 0);
-  border-left: rgba(216, 0, 0, 0.6);
+  background-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0), #fdfdfd, #9d297e);
+  border: none;
+  border-left: 6px solid #fb9e51;
 }
 .stampaArray #textArea:focus {
   outline: none;
@@ -121,9 +136,9 @@ body {
   margin-left: 5px;
   margin-top: 2%;
   resize: none;
-  background-image: linear-gradient(to left, #fdfdfd, #fdfdfd, rgba(216, 0, 0, 0.5));
-  border: 1px solid rgba(0, 0, 0, 0);
-  border-left: rgba(216, 0, 0, 0.6);
+  background-image: linear-gradient(to left, #fdfdfd, #fdfdfd, #9d297e);
+  border: none;
+  border-left: 6px solid #fb9e51;
 }
 #textArea1:focus {
   outline: none;
@@ -190,7 +205,7 @@ body {
   min-height: 627px;
   width: 85%;
   margin: 8.5% 6.8% 8.49% 8.3%;
-  background: url('img/sfondo.png');
+  background: url('img/sfondo_1.png');
   background-repeat: no-repeat;
   background-size: auto 627.9px;
   background-position: right;
@@ -334,7 +349,7 @@ li > a {
   }
   .flex_container section {
     /* resize background*/
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1)), url('img/sfondo.png');
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1)), url('img/sfondo_1.png');
     background-repeat: no-repeat;
     background-size: auto 627.9px;
     background-position: right;
@@ -454,7 +469,7 @@ li > a {
   }
   .flex_container section {
     /* resize background*/
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1)), url('img/sfondo.png');
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1)), url('img/sfondo_1.png');
     background-repeat: no-repeat;
     background-size: auto 627.9px;
     background-position: right;
@@ -525,7 +540,7 @@ li > a {
 @media only screen and (max-width: 992px) and (min-width: 767px) {
   .flex_container section {
     /* resize background*/
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)), url('img/sfondo.png');
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)), url('img/sfondo_1.png');
     background-repeat: no-repeat;
     background-size: auto 627.9px;
     background-position: right;

@@ -4,6 +4,22 @@
 body{
   .background-mixin(@url_img-1; no-repeat; 100%; static; none);
 }
+
+.class1{
+  background-color: red;
+}
+.classR2{
+  background-color: yellow;
+}
+.btnReg{
+  width: 120px;
+  height: auto;
+  p{
+    margin: 0;
+    text-align: center;
+  }
+}
+
 @import "variabili.less";
 @import "classi.less";
 @import url("icoons.css");
@@ -29,13 +45,16 @@ body{
   }
 
   #textArea{
+    z-index: -1;
     margin-top: 2%;
     margin-left: 5px;
     display: none;
     resize: none;
-    background-image: linear-gradient(to left, #fdfdfd, #fdfdfd, rgba(216, 0, 0, 0.5));
-    border: 1px solid rgba(0,0,0,0);
-    border-left: rgba(216, 0, 0, 0.6);
+
+    background-image: linear-gradient(to left,transparent, rgba(0, 0, 0, 0), #fdfdfd, #9d297e);
+    //background-color: transparent;
+    border: none;
+    border-left: 6px solid #fb9e51;
 
     &:focus{
       outline: none;
@@ -81,9 +100,10 @@ body{
   margin-left: 5px;
   margin-top: 2%;
   resize: none;
-  background-image: linear-gradient(to left, #fdfdfd, #fdfdfd, rgba(216, 0, 0, 0.5));
-  border: 1px solid rgba(0,0,0,0);
-  border-left: rgba(216, 0, 0, 0.6);
+  background-image: linear-gradient(to left, #fdfdfd, #fdfdfd, #9d297e);
+  //background-color: transparent;
+  border: none;
+  border-left: 6px solid #fb9e51;
   &:focus{
     outline: none;
   }
@@ -204,7 +224,7 @@ aside{
     button{
       margin:-2px 0 0 8.6%;;
       padding: 3.5px 9px 3.5px 10px;
-      background-image: linear-gradient(to right,#a21e8b,#fe3b4b,#ff7111);
+      background-image: linear-gradient(to right,#a21e8b,#fe3b4b,#ff7111);///
       color: white;
       border:none;
       border-radius:10px;
