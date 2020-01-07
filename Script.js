@@ -1,16 +1,15 @@
+
 var myJSON;
 var n=0;
 var Nome;
 var Email;
 var index =-1;
 var persona;
-var d=0;
 
-function changeTeme(){
-  let r="style.less";
-  let y= r.replace(/[variabili.less]+/gmi, "variabili1.less");
-  r=y;
-}
+//theme's change
+$("#Theme").click(function(){
+  $("link[href='less/styles.css']").attr("href", "less/styles_1.css");
+});
 
 //regex
 function regS(){
@@ -22,38 +21,15 @@ function regS(){
 }
 
 
-
-//change class
-document.getElementById('btnR').onclick= buttonReg;
-function buttonReg(){
-  let btn = document.getElementById('btnR');
-  let divx =document.getElementById('divR');
-  let nmB = document.getElementById('nomeBR');
-
-  switch (d) {
-    case 0:
-      d++;
-      divx.className=regFunction.setClass(divx, /[class1]+/gm, "classR2");
-      nmB.innerHTML="reset class";
-      break;
-    case 1:
-      d--;
-      nmB.innerHTML="change class";
-      divx.className=regFunction.setClass(divx, /[R2]{2}$/gmi, "1");
-      break;
-  }
+//change class color
+$("#btnR").click(function(){
+  $("#divR").toggleClass("classR2");
+  $("#nomeBR").text(toggleText("change class", "reset class", $(this).text()));
+  });
+// toggleText
+function toggleText(a, b, text){
+  return (text==a?b:a);
 }
-
-//CHANGE CLASS FUNCTION
-const regFunction= (function(){
-    function setClass(divx, a, b){
-      let er = divx.className.replace(a, b);
-      return er;
-    }
-  return{
-    setClass:setClass,
-  }
-})()
 
 //sideBar
 function openNav(){
@@ -62,6 +38,7 @@ function openNav(){
 function close_Nav(){
   document.getElementById("side_div").style.width= "0";
 }
+
 
 
 if(!localStorage.getItem("testJSON")){
