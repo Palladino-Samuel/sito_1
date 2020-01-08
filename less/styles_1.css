@@ -275,6 +275,22 @@ aside button:hover {
   background-image: linear-gradient(to left, #3db42d, #3f9574, #0746d5);
   cursor: pointer;
 }
+div .btn_prova {
+  margin: 30px -70px 0 8.6%;
+  padding: 3.5px 9px 3.5px 10px;
+  color: blue;
+  border: none;
+  border-radius: 1px;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  font-size: 17px;
+  letter-spacing: 1.6px;
+}
+div .btn_prova p {
+  text-align: center;
+  display: inline;
+}
 button > a {
   text-decoration: none;
   color: #fff;

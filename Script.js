@@ -9,7 +9,6 @@ var d=0;
   //theme's change
 $("#Theme").click(function(){
   $("link#switch_link").attr("href", (toggleLink(("less/styles.css"),("less/styles_1.css"), $("link#switch_link").attr("href"))));
-
 });
 
 
@@ -20,21 +19,12 @@ function toggleLink(a, b, link){
 
   //change class color
 $("#btnR").click(function(){
-  $("#divR").toggleClass("classR2");
+  $("#divR").toggleClass("class1");
   $("#nomeBR").text(toggleText("change class", "reset class", $(this).text()));
   });
   // toggleText
 function toggleText(a, b, text){
   return (text==a?b:a);
-}
-
-  //regex
-function regS(){
-  var str="abc 12345678 AAA";
-  var patt1=str.match(/[abc]+/gm);
-  var str1 = str.replace(/[\s]+/gm, '_');
-  var str2 = str.replace(/[abc]*/gmi, "");
-  document.getElementById("demo").innerHTML = str2;
 }
 
 //sideBar
@@ -127,3 +117,8 @@ class User{
     return "Ciao " + this.nome + ", la tua email è: " + this.email;
   }
 }
+
+//$(document).ready(function(){debugger;
+//  $("div").css("background-color",'gre');
+//  alert ("messaggio!!");
+//})
