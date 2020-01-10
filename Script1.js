@@ -5,7 +5,19 @@ var Email;
 var index =-1;
 var persona;
 
+//prova
+$("#w").click(function(){debugger;
+  console.log("Error: " + xhr.status + ": " + xhr.statusText);
+  $.get(tdre function(textData, status){
+    alert("Error: " + xhr.status + ": " + xhr.statusText);
+   alert("Data: " + textData + "\nStatus: " + status);
+ });
+})
 
+//list
+$( "li" ).each(function( index ) {
+  console.log( index + ": " + $( this ).text() );
+});
 
 //sideBar
 function openNav(){

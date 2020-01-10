@@ -2,7 +2,6 @@ var myJSON;
 var n=0;
 var Nome;
 var Email;
-
 var index =-1;
 var persona;
 var d=0;
@@ -17,46 +16,6 @@ function toggleLink(a, b, link){
   console.log(link);
   return (link==a?b:a);
 }
-
-//array
-var arrayJson=[];
-var contx=0;
-
-//chiamata to file json
-$(document).ready(function(){
-  $.ajax({
-    url: "articles.json",
-  //data:{}
-    success: function(data){
-        $.each(data,function(index, element){
-            arrayJson.push(element);
-            $("#divR").append("<br>"+arrayJson[index].title)
-        })
-
-        var contx=0;
-        $("#buttonImg").click(function(){
-             interval = setInterval(function(){
-              console.log(contx),
-              contx=(contx+1)%Object.keys(arrayJson).length,
-              $("#imgProva").attr("src", arrayJson[contx].picture);
-
-            },1500)
-            console.log("intervallo"+interval);
-            $("#buttonImg").click(function(){
-               stop();
-            })
-
-        })
-
-    },
-    error: function(e){
-        alert("error: "+e);
-    },
-    dataType: 'json',
-    cache:true
-  });
-})
-
 
   //change class color
 $("#btnR").click(function(){
@@ -92,20 +51,18 @@ function returnObject(event){
 
      myJSON = JSON.stringify(Utenti);
      localStorage.setItem("testJSON", myJSON);
+
      var index = Utenti.lastIndexOf(persona);
 }
-$("input[name='utente']").val();
+
 
 //  funzione registrazione
 function myFunction(){
-    var nome= $("input#id_nome").val();
-    var email= $("input#id_email").val();
+    var nome = document.forms["datiUtente"]["id_nome"].value;
+    var email = document.forms["datiUtente"]["id_email"].value;
     Nome=validateInput.returnNome(nome, "id_nome");
     Email=validateInput.returnEmail(email, "id_email");
  }
-
-
-
 //modulo validazione nome e email
 const validateInput= (function(){
 
