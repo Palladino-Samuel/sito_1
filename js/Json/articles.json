@@ -12,7 +12,7 @@
       "title": "Article Title 2",
       "picture": "https://placeimg.com/640/480/tech?2",
       "plot": "Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
-      "tag": "tech2",
+      "tag": "tech1",
       "like": true
     },
     {
@@ -20,14 +20,6 @@
       "title": "Article Title 3",
       "picture": "https://placeimg.com/640/480/tech?3",
       "plot": "Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
-      "tag": "tech1",
-      "like": false
-    },
-    {
-      "id": 4,
-      "title": "Article Title 4",
-      "picture": "https://placeimg.com/640/480/tech?4",
-      "plot": "Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
       "tag": "tech2",
       "like": false
     },
@@ -40,12 +32,35 @@
       "like": false
     },
     {
-      "id": 4,
-      "title": "Article Title 4",
+      "id": 5,
+      "title": "Article Title 5",
+      "picture": "https://placeimg.com/640/480/tech?3",
+      "plot": "Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
+      "tag": "tech4",
+      "like": false
+    },
+    {
+      "id": 6,
+      "title": "Article Title 6",
       "picture": "https://placeimg.com/640/480/tech?4",
       "plot": "Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
-      "tag": "tech2",
+      "tag": "tech4",
+      "like": false
+    },
+    {
+      "id": 7,
+      "title": "Article Title 7",
+      "picture": "https://placeimg.com/640/480/tech?3",
+      "plot": "Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
+      "tag": "tech3",
+      "like": false
+    },
+    {
+      "id": 8,
+      "title": "Article Title 8",
+      "picture": "https://placeimg.com/640/480/tech?4",
+      "plot": "Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
+      "tag": "tech3",
       "like": false
     }
   ]
-  2 div indipendenti, ognuno contiene tutti gli oggetti e ogni div avrà un selettortr per filtrare il tipo di ogetto da visualizzare basandosi sul tag "tech".

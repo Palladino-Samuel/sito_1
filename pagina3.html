@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <title>Pagina2</title>
+    <title>Pagina3</title>
     <meta charset="utf-8">
     <link rel="stylesheet" id="switch_link" href="less/styles.css">
+    <link rel="stylesheet" id="switch_link" href="less/styleNew.css">
+
     <link rel="stylesheet" href="css/flex_structure.css">
     <link rel="stylesheet" href="icoons.css">
 
@@ -40,39 +42,48 @@
             </nav>
       </header>
 
-          <article>
-            <h1>Add Account</h1>
-              <h2>INSERISCA I PROPRI DATI</h2>
 
-             <form class="form_dati" name="datiUtente" method="post" oninput="myFunction()" >
-               <fieldset>
-                 <legend>informazioni personali</legend>
 
-                  <input id="id_nome" aria-label="inserire il proprio nome" type="text"  placeholder="NOME" >
+      <div class="container">
 
-                  <input id="id_email" aria-label="inserire un email valida" type="email"  placeholder="E-MAIL" >
 
-               </fieldset>
-             </form>
-          </article>
+        <div class="div_1">
+            <select  class="selectTag" name="select1" >
+                <option selected>select</option>
+                <option>tech1</option>
+                <option>tech2</option>
+                <option >tech3</option>
+                <option >tech4</option>
+            </select>
 
-        <aside>
-              <button aria-label="premere per confermare" type="submit" onclick="returnObject(event)" id="sbm">SUBMIT</button>
-        </aside>
+            <div class="target">
+            </div>
+        </div><br>
 
-        <div id="divR">
-          <button id="Theme" class="btn_prova">prova</button>
-          <button id="btnR" class="btn_prova"><p id="nomeBR">change class</p></button>
-          <button id="buttonImg" class="btn_prova">vai</button>
-          <img id="imgProva" style="margin-left:100px;width:200px;height:200px" src="less/img/sfondo.png" alt="less/img/sfondo.png">
+        <div class="div_1">
+          <select class="selectTag" name="select2">
+              <option selected>select</option>
+              <option >tech1</option>
+              <option >tech2</option>
+              <option >tech3</option>
+              <option >tech4</option>
+          </select>
 
+          <div class="target">
+          </div>
         </div>
+        <br>
+        <button type="button" name="button" class="button1">riempi</button>
 
-    </section>
+    </div>
+
+
+
+    </section>lib.js
     <script src="js/All/SideBar.js"></script>
     <script src="js/All/TaskjQuery.js"></script>
-    <script src="js/Json/ReadJson.js"></script>
-    <script src="js/User/RegistrazioneUser.js"></script>
+    <!--<script type="module" src="js/Json/ReadJson1.js"></script>-->
+    <script type="module" src="js/Json/TypeJson.js"></script>
   </body>
 </html>
 <!--  2 div indipendenti, ognuno contiene tutti gli oggetti e ogni div avrà un selettortr per filtrare il tipo di ogetto da visualizzare basandosi sul tag "tech".
