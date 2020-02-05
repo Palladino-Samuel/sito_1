@@ -1,6 +1,6 @@
 //theme's change
 $("#Theme").click(function(){
-$("link#switch_link").attr("href", (toggleLink(("less/styles.css"),("less/styles_1.css"), $("link#switch_link").attr("href"))));
+$("link#switch_link").attr("href", (toggleLink(("less/styles.min.css"),("less/styles_1.min.css"), $("link#switch_link").attr("href"))));
 });
 //toggle link
 function toggleLink(a, b, link){

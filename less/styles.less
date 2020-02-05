@@ -20,8 +20,8 @@ body{
   }
 }
 
-@import "variabili.less";
-@import "classi.less";
+@import "variabili/variabili.less";
+@import "classi/classi.less";
 @import url("icoons.css");
 
 .stampaArray{
@@ -168,12 +168,23 @@ body{
 }
 //  section
 .flex_container section{
-    min-height: 627px;
+
+    overflow-y: auto;
+    height: 627px;
     width: 85%;
     // width:  calc(85% - 100px - 5%);
 
     margin:8.5% 6.8% 8.49% 8.3%;
     .background-mixin(@url_img-2; no-repeat; 627.9px; right; white);
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      //background-color: rgba(200,200,200, 0.3);
+      background-image: linear-gradient(to top, rgba(61, 180, 45, 0.5), rgba(63, 149, 116, 0.5), rgba(7, 70, 213, 0.5));
+      //outline: 3px solid slategrey;
+    }
 }
 //  nav
 nav{
